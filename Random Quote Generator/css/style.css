@@ -1,0 +1,85 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #FFA07A;
+}
+
+#twitter {
+  z-index: 1;
+  float: left;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 60px;
+  bottom: 20px;
+  margin: 0px;
+  margin-top: 60px;
+  background-color: #FFA07A;
+  color: white;
+}
+
+#quote {
+  z-index: 1;
+  float: right;
+  margin: 0px;
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  right: 60px;
+  bottom: 20px;
+  margin: 0px;
+  background-color: #FFA07A;
+  color: white;
+  margin-top: 60px;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 1em;
+}
+
+#quote:hover {
+  font-size: 1.05em;
+  font-weight: 600;
+}
+
+#bird:hover {
+  size: 2em;
+  font-weight: 600;
+}
+
+.quoteArea {
+  margin-top: 200px;
+  text-align: center;
+  width: 350px;
+  height: auto;
+  background: white;
+  text-align: justify;
+  padding: 60px;
+  border: 5px solid white;
+  border-radius: 3px;
+  color: #FFA07A;
+  clear: both;
+}
+
+#quoteDisplay {
+  font-family: 'Courgette', 'arial', cursive;
+  font-size: 1.4em;
+}
+
+#authorDisplay {
+  float: right;
+  clear: both;
+  text-align: right;
+  margin-bottom: 20px;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 1em;
+}
+
+#qsigns {
+  font-size: 2.5em;
+}
+
+#bird {
+  position: absolute;
+  font-size: 1.5em;
+  top: 10px;
+  left: 10px;
+}
