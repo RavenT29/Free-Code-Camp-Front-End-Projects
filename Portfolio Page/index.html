@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio Page</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <!--   
+BUGS TO FIX:
+
+-FreeCodeCamp icon does not work!!!!
+-when minimized images don t go right
+-when minimized thumbnails don t move when hovered 
+-when minimized thumbnails overlap the contact form
+-text input in form is always centered
+
+--->
+
+
+<header>
+  <div class="container-fluid row">
+    <ul>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#aboutme">About me</a></li>
+      <li><a href="#home">Home</a></li>
+    </ul>
+  </div>
+</header>
+
+
+<div class="container-fluid row">
+  <section id="part1" class="part">
+    <div class="inner">
+      <div class="copy" style="top: 200px">
+        <span class="anchor" id="home"></span>
+        <div class="section"></div>
+        <h1>ATM Web Design Studio</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="inner">
+      <div class="copy" style="top: 150px">
+        <span class="anchor" id="aboutme"></span>
+        <div class="section"></div>
+
+        <h1>About me</h1>
+        <div class="row container-fluid">
+          <div class="col-md-1"></div>
+          <div class="col-md-5 subtitle">
+            <h4>Skills</h4>
+            <p class="par">HTML</p>
+            <div class="container">
+              <div class="skills html">30%</div>
+            </div>
+
+            <p class="par">CSS</p>
+            <div class="container">
+              <div class="skills css">30%</div>
+            </div>
+
+            <p class="par">JavaScript</p>
+            <div class="container">
+              <div class="skills js">20%</div>
+            </div>
+
+            <p class="par">jQuery</p>
+            <div class="container">
+              <div class="skills jquery">60%</div>
+            </div>
+
+            <p class="par">Python</p>
+            <div class="container">
+              <div class="skills jquery">60%</div>
+            </div>
+
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-4" class="aboutme-dr">
+            <img class="profile-img" src="https://forum.freecodecamp.com/user_avatar/forum.freecodecamp.com/feuerbird29/120/39735_1.png">
+            <p style="text-align:justify"><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nunc lectus, sodales luctus lobortis eget, malesuada ut magna. Vestibulum facilisis, urna non sollicitudin hendrerit, enim odio consectetur libero, euismod rutrum enim mauris eget dolor. Nam non porta ligula, eu blandit nisi. Praesent sagittis libero in commodo lacinia. Vivamus quis ex pulvinar, tincidunt leo nec, pellentesque arcu. Curabitur interdum volutpat augue, rhoncus tristique diam dapibus vitae. Vivamus vulputate turpis ut ante laoreet fermentum.</em></p>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="part2" class="part">
+    <div class="inner">
+      <div class="copy">
+        <h1><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</em></h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="content container-fluid">
+    <div class="inner">
+      <div class="copy" style="top: 150px;">
+        <span class="anchor" id="projects"></span>
+        <div class="section"></div>
+        <h1>Projects</h1>
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-fluid img-thumbnail thumbnail" src="https://cdn.dreamtemplate.com/product/images/25/6518/20091229045442_1.jpg">
+
+          </div>
+          <div class="col-md-4">
+            <img class="img-fluid img-thumbnail thumbnail " src="http://www.buytemplates.net/img/display_images/d-liquid-layout-templates-busi1651-01.jpg">
+          </div>
+          <div class="col-md-4">
+            <img class="img-fluid img-thumbnail thumbnail" src="http://images.sixrevisions.com/2009/05/07-09_dark_glassy_template.jpg">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-fluid img-thumbnail thumbnail" src="http://streetsmash.com/wp-content/uploads/2013/09/grunge-portfolio-template-psd-.jpg">
+
+          </div>
+          <div class="col-md-4">
+            <img class="img-fluid img-thumbnail thumbnail " src=http://streetsmash.com/wp-content/uploads/2013/09/dark-mobile-app-layout-psd_thumb.jpg>
+          </div>
+          <div class="col-md-4">
+            <img class="img-fluid img-thumbnail thumbnail" src="http://www.webdesigndev.com/wp-content/uploads/2015/02/FLAT-BUSINESS-TEMPLATE.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</section>
+
+
+<section id="part3" class="part">
+  <div class="inner">
+    <div class="copy">
+      <h1><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. "</em></h1>
+    </div>
+  </div>
+</section>
+
+<section class="content">
+  <div class="inner">
+    <div class="copy" style="top:150px">
+      <span class="anchor" id="contact"></span>
+      <div class="section"></div>
+      <h1>Contact Information</h1>
+
+
+      <form action="#" method="get">
+        <fieldset>
+          <em style="margin-top:15px">Subject:</em><br>
+          <input class="subfield" type="subject"><br>
+          <em>Email:</em><br>
+          <input class="subfield" type="email"><br>
+          <em>Text:</em><br>
+          <input class="subfield2 container-fluid" type="text"><br>
+          <button type="submit">Submit</button>
+        </fieldset>
+
+
+        <div class="row" style="margin-top:40px">
+          <div class="col-md-3">
+            <button class="btn btn-block" id="button1"><a target="_blank" href="https://www.facebook.com/ana.toma.35"><i class="fa fa-facebook-official" aria-hidden="true">  </i>  Facebook </a></button></div>
+          <div class="col-md-3">
+            <button class="btn btn-block" id="button2"><a target="_blank" href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin-square" aria-hidden="true"></i>  LinkedIn</a></button></div>
+          <div class="col-md-3">
+            <button class="btn btn-block" id="button3"><a target="_blank" href="https://github.com/feuerbird29"><i class="fa fa-github" aria-hidden="true"></i>  GitHub</a></button></div>
+          <div class="col-md-3">
+            <button class="btn btn-block" id="button4"><a target="_blank" href="https://www.freecodecamp.com/feuerbird29"><i class="fa fa-free-code-camp" aria-hidden="true">  </i>FreeCodeCamp</a></button></div>
+        </div>
+
+
+    </div>
+</section>
+</div>
+</div>
+
+<footer>
+  <hr>
+
+  <p style="text-align:center"> Coded by <a href="https://www.freecodecamp.com/feuerbird29">Ana</a> </p>
+
+</footer>
+
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  
+  
+</body>
+</html>

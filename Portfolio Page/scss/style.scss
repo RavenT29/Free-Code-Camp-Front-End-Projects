@@ -1,0 +1,358 @@
+@import "compass/css3";
+@import "compass/css3/text-shadow";
+header {
+  position: relative;
+  z-index: 10;
+}
+
+/* Navigation bar */
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  opacity: 0.5;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-family: Oswald, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+li {
+  float: right;
+}
+
+/* used to see on which page you are but for some reason does not work oopsie*/
+li a:hover:not(.active) {
+  background-color: #004d4d;
+  text-decoration: none;
+  color: white;
+  font-size: 108%;
+  font-style: bold;
+  opacity: 1;
+}
+
+.active {
+  background-color: #004d4d;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#part1 {
+  background: url(https://static.pexels.com/photos/6548/cold-snow-winter-mountain.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+#part2 {
+  background: url(https://static.pexels.com/photos/2855/landscape-mountains-nature-lake.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+#part3 {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/c/c5/Moraine_Lake_17092005.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.part,
+.content {
+  text-align: center;
+  position: relative;
+  top: 10%;
+  width: 100%;
+}
+
+.inner {
+  min-height: 700px;
+  position: relative;
+}
+
+/* pattern
+.part .inner {
+  background: rgba(0, 0, 0, 0.7) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC) repeat;
+}*/
+
+.copy {
+  position: absolute;
+  top: 50%;
+  height: 10em;
+  margin-top: -5em;
+  width: 100%;
+}
+
+.part h1,
+.part p {
+  color: #fff;
+}
+
+.content h1,
+.content p {
+  color: #333;
+}
+
+#part1 h1 {
+  font-size: 60px;
+  font-weight: 700;
+  opacity: .9;
+  letter-spacing: 1px;
+  font-family: 'Oswald', sans-serif, !important;
+}
+
+h1 {
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #262626;
+  font-size: 32px;
+  padding: 0px 20px;
+}
+
+p {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  padding: 0px 20px;
+}
+
+.profile-img {
+  margin-top: 130px;
+  margin-right: 0px;
+  margin-bottom: 40px;
+  border-radius: 50%;
+  filter: grayscale(20%);
+}
+
+.subtitle {
+  text-align: left;
+}
+* {
+  box-sizing: border-box
+}
+
+/* Container for skill bars */
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding-right: 20px;
+  line-height: 35px;
+  color: white;
+}
+
+.html {
+  width: 37%;
+  background-color: #8c8c8c;
+  margin-left: -15px
+}
+
+.css {
+  width: 37%;
+  background-color: #8c8c8c;
+  margin-left: -15px
+}
+
+.js {
+  width: 27%;
+  background-color: #b3b3b3;
+  margin-left: -15px
+}
+
+.jquery {
+  width: 67%;
+  background-color: #595959;
+  margin-left: -15px
+}
+
+.python {
+  width: 67%;
+  background-color: #595959;
+  margin-left: -15px
+}
+
+.par {
+  color: #737373;
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  margin-left: -20px;
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+}
+
+h4 {
+  margin-left: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #404040;
+}
+
+.anchor {
+  display: block;
+  height: 125px;
+  margin-top: -125px;
+  visibility: hidden;
+}
+
+.thumbnail {
+  margin-top: 50px;
+  position: relative;
+  width: 400px;
+  height: 230px;
+  overflow: hidden;
+}
+
+.thumbnail:hover {
+  position: relative;
+  width: 105%;
+}
+
+form {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+form em {
+  font-family: 'Roboto', sans-serif;
+  margin-left: -200px;
+  color: #404040;
+}
+
+form input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.subfield {
+  width: 300px;
+  height: 30px;
+  border: 1px solid #999999;
+  padding: 5px;
+}
+
+.subfield2 {
+  width: 300px;
+  height: 150px;
+  border: 1px solid #999999;
+  padding: 5px;
+  text-align: top left;
+}
+
+form button {
+  background: grey;
+  display: inline-block;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 10%;
+}
+
+form button:hover {
+  color: white;
+  font-weight: 700;
+  font-style: bold;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-decoration: none !important;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  color: blue;
+  border-radius: 5%;
+}
+
+button:hover {
+  color: white;
+  font-style: bold;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-decoration: none !important;
+}
+
+#button1,
+i {
+  margin-left: 5px;
+  background: #3b5998;
+  color: white;
+}
+
+button i,
+a:hover {
+  color: white;
+  font-style: bold;
+  text-decoration: none;
+}
+
+#button2 {
+  margin-right: -5px;
+  background: #0077B5;
+  color: white;
+}
+
+#button3,
+i {
+  margin-left: -5px;
+  background: #333;
+  color: white;
+}
+
+#button4,
+i {
+  background: #006400;
+  color: white;
+  margin-left: -5px;
+}
+
+button a {
+  color: white;
+}
+
+i {
+  margin-right: 1em;
+  color: white;
+  background: none;
+}
+
+footer {
+  font-size: 10px;
+  margin: 0px;
+  margin-top: -40px;
+  padding: 0px;
+}
