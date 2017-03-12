@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Show the Local Weather</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <cffunction name="optionsMethod" access="remote" output="false" returntype="any" httpmethod="OPTIONS" description="Method to respond to AngularJS trial call">
+  <cfheader name="Access-Control-Allow-Headers" value="Content-Type,x-requested-with,Authorization,Access-Control-Allow-Origin">
+    <cfheader name="Access-Control-Allow-Methods" value="GET,OPTIONS">
+      <cfheader name="Access-Control-Allow-Origin" value="*">
+        <cfheader name="Access-Control-Max-Age" value="360">
+</cffunction>
+
+<body>
+  <div id="main">
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4 container-fluid centered">
+      <div class="image">
+        <img src="https://static.pexels.com/photos/99551/hot-air-balloon-valley-sky-99551.jpeg" class="container-fluid" />
+        <h2 id='getLocation'></h2>
+        </br>
+      </div>
+    </div>
+    <div class="row">
+      <ul>
+        <li>Weather</br>
+          <p id='weather'></p>
+        </li>
+        <li id="temp">Temperature</br>
+          <p class="currentTempC"></p>
+        </li>
+        <li id="tempFeels">Feels like</br>
+          <p id='feelsLikeC'></p>
+        </li>
+        
+          <li id="wind">Wind speed</br>
+            <p class='windSpeedKm'></p>
+          </li>
+       
+        <li>Humidity</br>
+          <p id='humidity'></p>
+        </li>
+
+      </ul>
+    </div>
+    <div class="col-md-4">
+    </div>
+    <div>
+
+    </div>
+  </div>
+
+
+</body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
