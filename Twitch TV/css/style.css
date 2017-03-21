@@ -1,0 +1,58 @@
+body {
+  background: #76323F;
+}
+
+.title {
+  color: white;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  margin-left: -215px;
+}
+
+h2 {
+  font-family: 'Bungee', cursive;
+  padding: 20px;
+  color: #76323F;
+}
+
+#main {
+  position: absolute;
+  background: #D7CEC7;
+  width: 600px;
+  left: 50%;
+  top: 15%;
+  margin-left: -300px;
+  text-align: justify;
+  padding: 20px;
+}
+
+span {
+  font-weight: 700;
+}
+
+p {
+  color: #565656;
+  font-family: 'Gruppo', cursive;
+  font-size: 1.15em;
+}
+
+.notStreaming {
+  color: red;
+}
+
+a {
+  color: green;
+  font-weight: 700;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  color: green;
+  font-weight: 700;
+  text-decoration: none;
+}
