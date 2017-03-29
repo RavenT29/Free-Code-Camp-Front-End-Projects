@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Wikipedia Viewer</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <!--
+to improve:
+.center search. make things transparent. change scroll bar.hover.icon on search.
+prettify button. add shadows. empty input after search.
+--->
+<head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Alegreya|EB+Garamond" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
+  <title>Wikipedia Viewer</title>
+</head>
+<div class='container-fluid'>
+    <div>
+    <h2>Wikipedia Viewer</h2>
+    </div>
+    <div class='col-md-6v container-fluid' id='main'>
+      <div class="row" id="searchArea">
+      <form>
+        <input id="myField" type="text"/></input>
+      </form>
+      <button id="search" class="press btn"><i class="fa fa-wikipedia-w" aria-hidden="true"></i></button>
+      <button class="press btn"><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Random</a></button>
+  </div>
+    <div id="results">
+      <div id="resultsText"></div>
+    </div>
+    </div>
+  
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

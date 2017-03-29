@@ -1,0 +1,101 @@
+body {
+  background-image:url('https://static.pexels.com/photos/27665/pexels-photo-27665.jpg'); 
+  background-position:center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+h2 {
+  padding-top:40px;
+  text-align:center;
+  color: white;
+  font-size:3em;
+  font-spacing:3px;
+  font-family: 'EB Garamond', serif;
+}
+p {
+  color:grey;
+  font-size:1em;
+  font-family: 'Crete Round', serif;
+}
+#results {
+  position:fixed;
+  left:25%;
+  width:50%;
+  height:60%;
+  display:block;
+  background-color:white;
+  padding:20px 15px;
+  text-align:left;
+  overflow: scroll;
+  text-align:justify;
+}
+h6 {
+  color: black;
+  font-family: 'Alegreya', serif;
+  font-weight:700px;
+  font-size:1.5em;
+}
+h6:link {
+  text-decoration:none;
+  color:black;
+}
+h6 a:hover {
+  text-decoration:none;
+  color:purple;
+}
+h6 a:link{
+  text-decoration:none;
+}
+span {
+  color:black;
+  font-family: 'Crete Round', serif;
+
+}
+#searchArea {
+  position:relative;
+  left:25%;
+  width:50%;
+  margin-top:40px;
+  margin-bottom:20px;
+}
+button {
+  margin-left:20px;
+}
+#myField {
+  max-width:300px;
+}
+.press {
+  position:relative;
+  align:right;
+  background:white;
+  color:black;
+  radius:5%;
+}
+.press:hover {
+  background:	#DCDCDC;
+  color:white;
+  text-decoration:none;
+}
+.press:link {
+  background:	#DCDCDC;
+  color:white;
+  text-decoration:none;
+}
+a:link {
+    text-decoration:none;
+}
+a:hover {
+    text-decoration:none;
+}
+button a:hover {
+    text-decoration:none;
+  color:white;
+}
+button a:link {
+    text-decoration:none;
+  color:black;
+}
