@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <!--
+User Story: I can add, subtract, multiply and divide two numbers.
+
+User Story: I can clear the input field with a clear button.
+
+User Story: I can keep chaining mathematical operations together until I hit the equal button, and the calculator will tell me the correct output.
+--->
+<header>
+  <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+</header>
+
+<body>
+  <div class="bodyCalc">
+    <div class="buttonsCalc" id="buttonsCalc">
+      <div class="row">
+        <button type="reset" class="btn" id="erase" value="remove" onclick="getInfo(this)">X</button>
+        <div class="display" id="display"></div>
+      </div>
+      <div class="row">
+        <button class="btn" id="b7" value="7" type="submit" onclick="getInfo(this)">7</button>
+        <button class="btn" id="b8" value="8" type="submit" onclick="getInfo(this)">8</button>
+        <button class="btn" id="b9" value="9" type="submit" onclick="getInfo(this)">9</button>
+        <button class="btn" id="divide" value="/" type="submit">&divide;</button>
+      </div>
+      <div class="row">
+        <button class="btn" id="b4" value="4" type="submit" onclick="getInfo(this)">4</button>
+        <button class="btn" id="b5" value="5" type="submit" onclick="getInfo(this)">5</button>
+        <button class="btn" id="b6" value="6" type="submit" onclick="getInfo(this)">6</button>
+        <button class="btn" id="multiply" value="*" type="submit" onclick="getInfo(this)">&times;</button>
+      </div>
+      <div class="row">
+        <button class="btn" id="b1" value="1" type="submit" onclick="getInfo(this)">1</button>
+        <button class="btn" id="b2" value="2" type="submit" onclick="getInfo(this)">2</button>
+        <button class="btn" id="b3" value="3" type="submit" onclick="getInfo(this)">3</button>
+        <button class="btn" id="minus" value="-" type="submit" onclick="getInfo(this)">-</button>
+      </div>
+      <div class="row">
+        <button class="btn" id="b0" value="0" type="submit" onclick="getInfo(this)">0</button>
+        <button class="btn" id="coma" value="." type="submit" onclick="getInfo(this)">.</button>
+
+        <button class="btn" id="equal" value="=" type="submit" onclick="getInfo(this)">=</button>
+        <button class="btn" id="plus" value="+" type="submit" onclick="getInfo(this)">+</button>
+      </div>
+    </div>
+  </div>
+</body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+body {
+  background: #466368;
+}
+
+#buttonsCalc {
+  position: absolute;
+  width: 270px;
+  height: 340px;
+  top: 50%;
+  left: 50%;
+  margin-top: -170px;
+  margin-left: -135px;
+  outline: 2px solid white;
+  outline-offset: 10px;
+  outline-radius: 20%;
+}
+
+.buttonsCalc {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+}
+
+.btn {
+  z-index: 10;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  border: solid 1px grey;
+  margin: 5px;
+  left: 10px;
+  top: -5px;
+  color: #466368;
+  font-weight: 700;
+  font-family: 'Black Ops One', cursive;
+}
+
+.display {
+  background: white;
+  position: absolute;
+  z-index: -1;
+  width: 270px;
+  height: 60px;
+  text-overflow: clip;
+  margin-left: 15px;
+  padding: 15px;
+  padding-left: 75px;
+  color: #466368;
+  font-weight: 700;
+  font-family: 'Black Ops One', cursive;
+}
+
+#erase {
+  background: #466368;
+  color: white;
+  z-index: 10;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: solid 1px #466368;
+  margin: 5px;
+  left: 25px;
+  top: 10px;
+  padding: 0px;
+  font-weight: 700;
+  font-family: 'Black Ops One', cursive;
+  margin-bottom: 35px;
+}
+
+#erase:hover {
+  background: #cc0000;
+  border: solid 1px #cc0000;
+}
+
+.btn:hover {
+  color: #cc0000;
+}
