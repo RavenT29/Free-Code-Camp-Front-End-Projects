@@ -12,26 +12,31 @@
 </head>
 
 <body>
-  <button>-</button>
-<button>+</button>
+  <button id="sessionMinus" onclick="displayMinSession()">-</button>
+<button id="sessionPlus" onclick="displayMinSession()">+</button>
+<div id="sessionLen">
+</div>
 <div id="session">
   <p>Session</p>
 </div>
-<button>-</button>
-<button>+</button>
+<button id="breakMinus">-</button>
+<button id="breakPlus">+</button>
+<div id="breakLen">
+</div>
 <div id="break">
-    <p>Break</p>
+  <p>Break</p>
 </div>
 <button>-</button>
 <button>+</button>
 <div id="numSessions">
-    <p>Number of Sessions</p>
+  <p>Number of Sessions</p>
 </div>
 <div id="seconds">
-    <p>Seconds</p>
+  <p>Seconds</p>
 </div>
-<button id="start" >Start</button>
+<button id="start">Start</button>
 <div id="display"></div>
+<div id="sound"></div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 
     <script src="js/index.js"></script>
