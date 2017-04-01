@@ -2,7 +2,7 @@
 
 User Story: I can start a 25 minute pomodoro, and the timer will go off once 25 minutes have elapsed.  X DONE
 
-User Story: I can reset the clock for my next pomodoro.   X 
+User Story: I can reset the clock for my next pomodoro.   X DONE
 
 User Story: I can customize the length of each pomodoro.   X DONE
 
@@ -38,26 +38,25 @@ $(document).ready(function() {
 
   function displayMinSession(min) {
     document.getElementById("sessionLen").innerHTML = "<p id='idSession'>" + min + "</p>";
+    reset();
     $("#sessionMinus").on("click", function() {
       if (min === 0) {
         document.getElementById("sessionLen").innerHTML = "<p id='idSession'>" + min + "</p>";
         reset();
-        return min;
       } else {
+        min--;
         document.getElementById("sessionLen").innerHTML = "<p id='idSession'>" + min + "</p>";
         reset();
-        return min--;
       }
     });
     $("#sessionPlus").on("click", function() {
       if (min > 59) {
         document.getElementById("sessionLen").innerHTML = "<p id='idSession'>" + min + "</p>";
         reset();
-        return min;
       } else {
+        min++;
         document.getElementById("sessionLen").innerHTML = "<p id='idSession'>" + min + "</p>";
         reset();
-        return min++;
       }
     });
   }
@@ -81,23 +80,24 @@ $(document).ready(function() {
       }
     });
   }
-  
 
   $("#start").on("click", function() {
-    seconds = min * 60,
-      breakSeconds = breaks * 60
-      //GET SESSION LENGTH AND BREAK AND NUMBER OF SESSIONS HERE!!!
     startS(seconds, breakSeconds);
   });
+/*  
+$('#pause').click(function(){
+    // Clear the timeout
+    clearTimeout(timer);
+});
   
+  $('#restart').click(function(){
+    // Clear the timeout
+    startS();
+});
+*/
   $('div').on("click", displayMinSession(min));
   $('div').on("click", displayMinBreak(breaks));
-  
-  
 
-  //console.log(lengthSession);
- // console.log(lengthBreak);
-  
   //  TIMER FUNCTIONALITY  
 
   function startTimer(seconds) {
@@ -108,9 +108,9 @@ $(document).ready(function() {
   //runs timer for a session; plays sound in the last 3 seconds
 
   function startS() {
-     seconds=parseInt(document.getElementById("idSession").innerHTML)*60;
-     breakSeconds=parseInt(document.getElementById("idBreaks").innerHTML)*60;
-    console.log(seconds/60);
+    seconds = parseInt(document.getElementById("idSession").innerHTML) * 60;
+    breakSeconds = parseInt(document.getElementById("idBreaks").innerHTML) * 60;
+    console.log(seconds / 60);
     clearInterval(timer);
     timer = setInterval(function() {
       startTimer(seconds);
@@ -124,7 +124,7 @@ $(document).ready(function() {
         display(seconds);
         return seconds--;
       }
-    }, 80); //   CHANGE THIS NUMBER!!!!!!
+    }, 1000); //   CHANGE THIS NUMBER!!!!!!
   }
 
   //runs timer for a break; plays sound in the last 3 seconds
@@ -136,14 +136,14 @@ $(document).ready(function() {
       if (seconds === 0) {
         mySound.play();
         clearInterval(timer);
-        reset();
- //       display(seconds);
+        display(seconds);
+        startS();
       } else {
         if (seconds < 4) mySound.play();
         display(seconds);
         return seconds--;
       }
-    }, 80); //   CHANGE THIS NUMBER!!!!!!
+    }, 1000); //   CHANGE THIS NUMBER!!!!!!
   }
 
   //displays countdown numbers
@@ -156,13 +156,11 @@ $(document).ready(function() {
     if (displayMin < 10) displayMin = '0' + displayMin;
     document.getElementById("display").innerHTML = displayMin + " : " + displaySec;
   }
-  
-  function reset(){
-    var resetMinutes=parseInt(document.getElementById("idSession").innerHTML);
+
+  function reset() {
+    var resetMinutes = parseInt(document.getElementById("idSession").innerHTML);
     if (resetMinutes < 10) resetMinutes = '0' + resetMinutes;
     document.getElementById("display").innerHTML = resetMinutes + " : 00";
   }
-
-    
 
 }); //document ready
