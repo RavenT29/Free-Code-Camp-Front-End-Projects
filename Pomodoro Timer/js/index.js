@@ -1,3 +1,13 @@
+/*
+
+User Story: I can start a 25 minute pomodoro, and the timer will go off once 25 minutes have elapsed.  X DONE
+
+User Story: I can reset the clock for my next pomodoro.   X 
+
+User Story: I can customize the length of each pomodoro.   X DONE
+
+*/
+
 $(document).ready(function() {
   //there is a SESSION and a BREAK
   /* 
@@ -6,7 +16,6 @@ $(document).ready(function() {
   minutes=min;
   session=S;
   break=B;
-
     MAIN FUNCTIONS:
   startS;
   startB;
@@ -19,52 +28,56 @@ $(document).ready(function() {
   var timer = 0,
     leftSec = 0,
     numberS = 4, //number of session-break pairs
-    min = 25, //number of minutes in as session
+    min = 2, //number of minutes in as session
     seconds = min * 60, //number of seconds in a session
-    breaks = 5, //number of minutes in a break
+    breaks = 1, //number of minutes in a break
     breakSeconds = breaks * 60, //number of seconds in a break
     mySound = new Audio("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Beeps/Electron-wwwbeat-8521/Electron-wwwbeat-8521_hifi.mp3");
 
   //  BUTTONS AND GETTING NEW VALUES
 
   function displayMinSession(min) {
-    document.getElementById("sessionLen").innerHTML = "<p>" + min + "</p>";
+    document.getElementById("sessionLen").innerHTML = "<p id='idSession'>" + min + "</p>";
     $("#sessionMinus").on("click", function() {
       if (min === 0) {
-        document.getElementById("sessionLen").innerHTML = "<p>" + min + "</p>";
+        document.getElementById("sessionLen").innerHTML = "<p id='idSession'>" + min + "</p>";
+        reset();
         return min;
       } else {
-        document.getElementById("sessionLen").innerHTML = "<p>" + min + "</p>";
+        document.getElementById("sessionLen").innerHTML = "<p id='idSession'>" + min + "</p>";
+        reset();
         return min--;
       }
     });
     $("#sessionPlus").on("click", function() {
       if (min > 59) {
-        document.getElementById("sessionLen").innerHTML = "<p>" + min + "</p>";
+        document.getElementById("sessionLen").innerHTML = "<p id='idSession'>" + min + "</p>";
+        reset();
         return min;
       } else {
-        document.getElementById("sessionLen").innerHTML = "<p>" + min + "</p>";
+        document.getElementById("sessionLen").innerHTML = "<p id='idSession'>" + min + "</p>";
+        reset();
         return min++;
       }
     });
   }
 
   function displayMinBreak(breaks) {
-    document.getElementById("breakLen").innerHTML = "<p>" + breaks + "</p>";
+    document.getElementById("breakLen").innerHTML = "<p id='idBreaks'>" + breaks + "</p>";
     $("#breakMinus").on("click", function() {
       if (breaks === 0) {
-        document.getElementById("breakLen").innerHTML = "<p>" + breaks + "</p>";
+        document.getElementById("breakLen").innerHTML = "<p id='idBreaks'>" + breaks + "</p>";
       } else {
         breaks--;
-        document.getElementById("breakLen").innerHTML = "<p>" + breaks + "</p>";
+        document.getElementById("breakLen").innerHTML = "<p id='idBreaks'>" + breaks + "</p>";
       }
     });
     $("#breakPlus").on("click", function() {
       if (breaks > 59) {
-        document.getElementById("breakLen").innerHTML = "<p>" + breaks + "</p>";
+        document.getElementById("breakLen").innerHTML = "<p id='idBreaks'>" + breaks + "</p>";
       } else {
         breaks++;
-        document.getElementById("breakLen").innerHTML = "<p>" + breaks + "</p>";
+        document.getElementById("breakLen").innerHTML = "<p id='idBreaks'>" + breaks + "</p>";
       }
     });
   }
@@ -76,7 +89,15 @@ $(document).ready(function() {
       //GET SESSION LENGTH AND BREAK AND NUMBER OF SESSIONS HERE!!!
     startS(seconds, breakSeconds);
   });
+  
+  $('div').on("click", displayMinSession(min));
+  $('div').on("click", displayMinBreak(breaks));
+  
+  
 
+  //console.log(lengthSession);
+ // console.log(lengthBreak);
+  
   //  TIMER FUNCTIONALITY  
 
   function startTimer(seconds) {
@@ -86,7 +107,10 @@ $(document).ready(function() {
 
   //runs timer for a session; plays sound in the last 3 seconds
 
-  function startS(seconds, breakSeconds) {
+  function startS() {
+     seconds=parseInt(document.getElementById("idSession").innerHTML)*60;
+     breakSeconds=parseInt(document.getElementById("idBreaks").innerHTML)*60;
+    console.log(seconds/60);
     clearInterval(timer);
     timer = setInterval(function() {
       startTimer(seconds);
@@ -112,7 +136,8 @@ $(document).ready(function() {
       if (seconds === 0) {
         mySound.play();
         clearInterval(timer);
-        display(seconds);
+        reset();
+ //       display(seconds);
       } else {
         if (seconds < 4) mySound.play();
         display(seconds);
@@ -124,11 +149,20 @@ $(document).ready(function() {
   //displays countdown numbers
 
   function display(seconds) {
+
     var displaySec = seconds % 60;
     var displayMin = Math.floor(seconds / 60);
     if (displaySec < 10) displaySec = '0' + displaySec;
     if (displayMin < 10) displayMin = '0' + displayMin;
     document.getElementById("display").innerHTML = displayMin + " : " + displaySec;
   }
+  
+  function reset(){
+    var resetMinutes=parseInt(document.getElementById("idSession").innerHTML);
+    if (resetMinutes < 10) resetMinutes = '0' + resetMinutes;
+    document.getElementById("display").innerHTML = resetMinutes + " : 00";
+  }
+
+    
 
 }); //document ready
