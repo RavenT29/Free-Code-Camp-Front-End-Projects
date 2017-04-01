@@ -1,5 +1,3 @@
 A Pen created at CodePen.io. You can find this one at http://codepen.io/feuerbird29/pen/oZQErr.
 
  
-
-All user stories fulfilled.

@@ -7,25 +7,43 @@
   
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
 
-  
+      <link rel="stylesheet" href="css/style.css">
+
   
 </head>
 
 <body>
-  <button id="sessionMinus">-</button>
-<button id="sessionPlus">+</button>
-<div id="sessionLen">
+  <header>
+  <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+</header>
+
+<h1>Pomodoro Clock</h1>
+
+<div id="nameSession">
+  <p id="nameSessionP">Session</p>
 </div>
-<div id="session">
-  <p>Session</p>
+
+<div id="modifySession">
+  <button id="sessionMinus" class="btn">-</button>
+  <button id="sessionPlus" class="btn">+</button>
+  <div id="session">
+    <div id="sessionLen">
+    </div>
+  </div>
 </div>
-<button id="breakMinus">-</button>
-<button id="breakPlus">+</button>
-<div id="breakLen">
+
+<div id="nameBreak">
+  <p id="nameBreakP">Break</p>
 </div>
-<div id="break">
-  <p>Break</p>
+
+<div id="modifyBreak">
+  <button id="breakMinus">-</button>
+  <button id="breakPlus">+</button>
+  <div id="breakLen">
+  </div>
 </div>
+
+<!--
 <button>-</button>
 <button>+</button>
 <div id="numSessions">
@@ -34,9 +52,13 @@
 <div id="seconds">
   <p>Seconds</p>
 </div>
+--->
 <button id="start">Start</button>
+<button id="pause">Pause</button>
+<button id="restart">Restart</button>
+<div class="circle">
 <div id="display"></div>
-<div id="sound"></div>
+</div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 
     <script src="js/index.js"></script>
