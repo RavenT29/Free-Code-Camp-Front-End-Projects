@@ -9,32 +9,22 @@ User Story: I can customize the length of each pomodoro.   X DONE
 */
 
 $(document).ready(function() {
-  //there is a SESSION and a BREAK
-  /* 
-    NOTATIONS:
-  seconds=sec;
-  minutes=min;
-  session=S;
-  break=B;
-    MAIN FUNCTIONS:
-  startS;
-  startB;
-  display;
-  counter: seconds
-  */
 
   //  VARIABLE DECLARATIONS AND DEFAULT VALUES
 
   var timer = 0,
     leftSec = 0,
+    bool = true,
     numberS = 4, //number of session-break pairs
-    min = 2, //number of minutes in as session
+    min = 25, //number of minutes in as session
     seconds = min * 60, //number of seconds in a session
-    breaks = 1, //number of minutes in a break
+    breaks = 5, //number of minutes in a break
     breakSeconds = breaks * 60, //number of seconds in a break
     mySound = new Audio("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Beeps/Electron-wwwbeat-8521/Electron-wwwbeat-8521_hifi.mp3");
 
   //  BUTTONS AND GETTING NEW VALUES
+
+  //buttons that increase/decrease the number of minutes in a session
 
   function displayMinSession(min) {
     document.getElementById("sessionLen").innerHTML = "<p id='idSession'>" + min + "</p>";
@@ -61,6 +51,8 @@ $(document).ready(function() {
     });
   }
 
+  //buttons that increase/decrease the number of minutes in a break
+
   function displayMinBreak(breaks) {
     document.getElementById("breakLen").innerHTML = "<p id='idBreaks'>" + breaks + "</p>";
     $("#breakMinus").on("click", function() {
@@ -81,20 +73,19 @@ $(document).ready(function() {
     });
   }
 
-  $("#start").on("click", function() {
-    startS(seconds, breakSeconds);
-  });
-/*  
-$('#pause').click(function(){
-    // Clear the timeout
-    clearTimeout(timer);
-});
-  
-  $('#restart').click(function(){
-    // Clear the timeout
-    startS();
-});
-*/
+  //starts and resets timer
+
+  $(".circle").on("click", function() {
+    if (bool) {
+      startS(seconds, breakSeconds);
+      bool = false;
+    } else {
+      clearTimeout(timer);
+      reset();
+      bool = true;
+    }
+  })
+
   $('div').on("click", displayMinSession(min));
   $('div').on("click", displayMinBreak(breaks));
 
@@ -108,9 +99,11 @@ $('#pause').click(function(){
   //runs timer for a session; plays sound in the last 3 seconds
 
   function startS() {
+    document.getElementById("button").innerHTML = "Session";
+    document.getElementById("button").style.color = "#FFC107";
+
     seconds = parseInt(document.getElementById("idSession").innerHTML) * 60;
     breakSeconds = parseInt(document.getElementById("idBreaks").innerHTML) * 60;
-    console.log(seconds / 60);
     clearInterval(timer);
     timer = setInterval(function() {
       startTimer(seconds);
@@ -130,6 +123,8 @@ $('#pause').click(function(){
   //runs timer for a break; plays sound in the last 3 seconds
 
   function startB(seconds) {
+    document.getElementById("button").innerHTML = "Break";
+    document.getElementById("button").style.color = "#009688";
     clearInterval(timer);
     timer = setInterval(function() {
       startTimer(seconds);
