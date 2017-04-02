@@ -12,7 +12,7 @@
 */
 
 body {
-  background: #FFA000;
+  background: #212121;
 }
 
 h1 {
@@ -23,8 +23,7 @@ h1 {
 }
 
 #modifySession {
-  //  background: grey;
-  margin-left: 50px;
+  margin-left: 150px;
   color: white;
   margin-top: -30px;
   width: 200px;
@@ -40,9 +39,9 @@ h1 {
   font-family: 'Black Ops One', cursive;
   font-size: 2em;
   text-align: center;
-  padding: 0px;
+  padding: 0;
   color: white;
-  background: #FFA000;
+  background: none;
   border-radius: 5px;
 }
 
@@ -52,7 +51,7 @@ h1 {
 
 #idSession {
   text-align: center;
-  padding: 0px;
+  padding: 0;
   margin-top: 50px;
   color: white;
   font-family: 'Black Ops One', cursive;
@@ -62,7 +61,7 @@ h1 {
 #nameSession {
   width: 200px;
   height: auto;
-  margin-left: 50px;
+  margin-left: 150px;
 }
 
 #nameSessionP {
@@ -76,8 +75,7 @@ h1 {
 
 #modifyBreak {
   float: right;
-  // background: grey;
-  margin-right: 50px;
+  margin-right: 150px;
   color: white;
   margin-top: -50px;
   width: 200px;
@@ -95,7 +93,7 @@ h1 {
   text-align: center;
   padding: 0px;
   color: white;
-  background: #FFA000;
+  background: none;
   border-radius: 5px;
 }
 
@@ -115,7 +113,7 @@ h1 {
   width: 200px;
   height: auto;
   float: right;
-  margin-right: 50px;
+  margin-right: 150px;
   margin-top: -114px;
 }
 
@@ -127,22 +125,51 @@ h1 {
 }
 
 .circle {
-  position:absolute;
-  border:solid 5px white;
-  width:400px;
-  height:400px;
-  top:50%;
-  left:50%;
-  margin-left:-200px;
-  margin-top:-200px;
-  border-radius:50%;
+  position: absolute;
+  border: solid 5px white;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -200px;
+  border-radius: 50%;
 }
 
 #display {
-  position:relative;
+  position: relative;
   font-family: 'Black Ops One', cursive;
   font-size: 4em;
-  color:white;
-  text-align:center;
-  top:23%;
+  color: white;
+  text-align: center;
+  top: 23%;
+}
+
+#displayTitle {
+  font-family: 'Black Ops One', cursive;
+  color: white;
+  position: absolute;
+  width: 300px;
+  overflow: clip;
+  bottom: 25%;
+  left: 50%;
+  margin-left: -150px;
+  text-align: center;
+}
+
+#button {
+  font-size: 4em;
+}
+
+#sessionMinus:hover,
+#sessionPlus:hover,
+#breakMinus:hover,
+#breakPlus:hover {
+  background: #009688;
+  cursor: pointer;
+}
+
+.circle:hover {
+  background: #424242;
+  cursor: pointer;
 }
