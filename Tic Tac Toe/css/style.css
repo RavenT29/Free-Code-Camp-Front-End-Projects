@@ -1,0 +1,54 @@
+body{
+  background:grey;
+}
+.main {
+  width:600px;
+  height:600px;
+  background:#131519;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin: -300px 0px 0px -300px;
+}
+.square {
+  width:200px;
+  height:200px;
+  position:absolute;
+  border:solid 1px white;
+  display:block;
+}
+#sq2 {
+  margin-left:200px;
+}
+#sq3 {
+  margin-left:400px;
+}
+#sq4 {
+  margin-top:200px;
+}
+#sq5 {
+  margin-top:200px;
+  margin-left:200px;
+}
+#sq6 {
+  margin-top:200px;
+  margin-left:400px;
+}
+#sq7 {
+  margin-top:400px;
+  margin-left:0px;
+}
+#sq8 {
+  margin-top:400px;
+  margin-left:200px;
+}
+#sq9 {
+  margin-top:400px;
+  margin-left:400px;
+}
+.square:hover {
+  background:black;
+}
+.square:active {
+  background:pink;
+}
