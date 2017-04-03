@@ -24,12 +24,13 @@ var wK;
 var wM;
 var celsius = true;
 
-if (location.protocol !== 'https:') {
+if (location.protocol != 'https:')
+{
   alert('Use SSL (https://) in order for the page to work correctly. Update your URL link in your address bar.');
 }
+// delete this on junne 1.st when all codepen pages will be https
 
 $(document).ready(function() {
-
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(success, error);
   }
@@ -39,16 +40,14 @@ $(document).ready(function() {
   }
 
   function update(data) {
-    //   console.log(data);
+
     $("#getLocation").html(data.location.city + ', ' + data.location.country_name);
     $("#weather").html(data.current_observation.weather);
     $("#feelsLikeC").html(data.current_observation.feelslike_c + " &degC");
-    $("#feelsLikeF").html(data.current_observation.feelslike_f + " &degF");
     $(".currentTempC").html(data.current_observation.temp_c + " &degC");
-    $(".currentTempF").html(data.current_observation.temp_f + " &degF");
     $('#humidity').html(data.current_observation.relative_humidity);
     $('.windSpeedKm').html(data.current_observation.wind_kph + " km/h");
-    $('.windSpeedMiles').html(data.current_observation.wind_mph + " mi/h");
+
     current = data.current_observation.weather;
     degC = data.current_observation.temp_c + " &degC";
     degF = data.current_observation.temp_f + " &degF";
@@ -56,7 +55,6 @@ $(document).ready(function() {
     degFfeels = data.current_observation.feelslike_f + " &degF";
     wK = data.current_observation.wind_kph + " km/h";
     wM = data.current_observation.wind_mph + " mi/h";
-  //   console.log(current);
 
     //checks for "light" or "heavy" descriptions
     function check(str) {
@@ -71,6 +69,7 @@ $(document).ready(function() {
     if (check(current)) {
       current = current.slice(6, current.length);
     }
+    
     //checks if the current weather condition is in a certain weather category
     function checkGroup(str, arr) {
       for (var i = 0; i < arr.length; i++) {
@@ -82,10 +81,8 @@ $(document).ready(function() {
     }
     var group = "";
 
-
     //returns the weather category
     function returnGroup(current) {
-
       if (checkGroup(current, rain)) {
         group = "rain";
       } else if (checkGroup(current, thunderstorms)) {
@@ -108,6 +105,7 @@ $(document).ready(function() {
       }
       return group;
     }
+  
 returnGroup(current);
     var bUrl = "";
     //returns the url that should be used for the current weather type
@@ -140,9 +138,7 @@ returnGroup(current);
         bUrl = "https://static.pexels.com/photos/99551/hot-air-balloon-valley-sky-99551.jpeg";
         break;
     }
-    //    console.log(bUrl); 
 
-    //    bUrl="https://static.pexels.com/photos/109096/pexels-photo-109096.jpeg";
     $("img").attr("src", bUrl);
     $("#main").css('background-image', 'url(' + bUrl + ')');
   }
@@ -151,7 +147,6 @@ returnGroup(current);
     console.log(err.message)
   };
 
-  
       var click = true;
     $('#wind').on('click', function() {
       if (click === false) {
@@ -163,46 +158,39 @@ returnGroup(current);
       } else if (click === true) {
         $('#wind').html(function() {
           $(this).html("Wind speed<br>" + wM);
-          click = false;
-           
+          click = false;       
         });
-
       }
     });
   click=false;
       $('#temp').on('click', function() {
-      if (click === false) {
+      if (click == false) {
         $('#temp').html(function() {
           $(this).html("Temperature<br>" + degF);
           click=true;
            
         });
-      } else if (click === true) {
+      } else if (click == true) {
         $('#temp').html(function() {
           $(this).html("Temperature<br>" + degC);
           click = false;
            
         });
-
       }
     });
     click=false;
       $('#tempFeels').on('click', function() {
-      if (click === false) {
+      if (click == false) {
         $('#tempFeels').html(function() {
           $(this).html("Feels like<br>" + degFfeels);
           click=true;
            
         });
-      } else if (click === true) {
+      } else if (click == true) {
         $('#tempFeels').html(function() {
           $(this).html("Feels like<br>" + degCfeels);
-          click = false;
-           
+          click = false;      
         });
-
       }
     });
-  
-  
 });
