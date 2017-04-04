@@ -52,3 +52,9 @@ body{
 .square:active {
   background:pink;
 }
+div {
+   color:white;
+   text-align:center;
+   vertical-align:center;
+   font-size:3em;
+}
