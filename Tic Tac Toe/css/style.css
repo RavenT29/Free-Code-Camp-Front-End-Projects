@@ -58,3 +58,18 @@ div {
    vertical-align:center;
    font-size:3em;
 }
+#display {
+   position:absolute;
+   color:red;
+   text-align:center;
+   vertical-align:center;
+   font-size:3em;
+   z-index:100;
+   left:50%;
+}
+.btn{
+   width:100px;
+   height:30px;
+   marginleft:10px;
+   padding:0px;
+}
