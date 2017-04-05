@@ -1,3 +1,11 @@
+/*
+User Story: I can play a game of Tic Tac Toe with the computer. X DONE
+
+User Story: My game will reset as soon as it's over so I can play again. X DONE
+
+User Story: I can choose whether I want to play as X or O.
+*/
+
 var win = [
    [1, 2, 3],
    [4, 5, 6],
@@ -12,7 +20,7 @@ var movesLeft = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 var user = [];
 var computer = [];
 var val;
-
+var userChoice="X", computerChoice="0";
 /*
     $("button").click(function() {
       var clickedButton = $(this).val();
@@ -44,7 +52,11 @@ function reset() {
    movesLeft = [1, 2, 3, 4, 5, 6, 7, 8, 9];
    user = [];
    computer = [];
-   //ask about X and 0
+   for(var i=1;i<10;i++){
+      document.getElementById("display").innerHTML = "";
+      document.getElementById("sq"+i).innerHTML = "";
+      document.getElementById("sq"+i).style.pointerEvents = "auto";
+   }
 }
 
 function randomMove(arr) {
@@ -55,31 +67,42 @@ function randomMove(arr) {
 
 function computerMove() {
    var moveNumber = randomMove(movesLeft);
-   $("#sq"+moveNumber).html("0");
+   document.getElementById("sq" + moveNumber).innerHTML = computerChoice;
+   document.getElementById("sq" + moveNumber).style.pointerEvents = "none";
    var helper = move(computer, movesLeft, moveNumber);
    if (check(computer, win)) {
-      document.getElementById(display).innerHTML = "You lose";
-   } else if (movesLeft === []) {
-      document.getElementById(display).innerHTML = "Draw";
+      document.getElementById("display").innerHTML = "You lose";
+            for(var i=1;i<10;i++){
+      document.getElementById("sq"+i).style.pointerEvents = "none";
    }
-   $(".square").on("click", userMove);
+   } else if (movesLeft.length < 1) {
+      document.getElementById("display").innerHTML = "Draw";
+   }
 }
 
 function userMove() {
    val = $(this).attr("value");
-   var id=$(this).attr("id");
-   document.getElementById(id).innerHTML = "X";
+   var id = $(this).attr("id");
+   document.getElementById(id).innerHTML = userChoice;
+   document.getElementById(id).style.pointerEvents = "none";
    val = parseInt(val);
    var helper = move(user, movesLeft, val);
    if (check(user, win) === true) {
-      document.getElementById(display).innerHTML = "Win"; //add return winning function and reset 
-   } else if (movesLeft === undefined || movesLeft.length === 0) {
-      document.getElementById(display).innerHTML = "Draw"; //add return draw function and reset
+      document.getElementById("display").innerHTML = "You Win";
+      for(var i=1;i<10;i++){
+      document.getElementById("sq"+i).style.pointerEvents = "none";
    }
-    computerMove();
+   } else if (movesLeft.length < 1) {
+      document.getElementById("display").innerHTML = "Draw";
+   } else {
+      //console.log(user);//test
+      //console.log(movesLeft);//test
+      computerMove().delay(3000);
+   }
+
 }
 
 $(document).ready(function() {
-   $(".square").on("click", computerMove);
+   $(".square").on("click", userMove);
 
 }); //document ready
