@@ -5,6 +5,9 @@
   <title>Tic Tac Toe</title>
     <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Lalezar" rel="stylesheet">
   
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
 
@@ -14,25 +17,22 @@
 </head>
 
 <body>
-    <!--
-font-family: 'Homemade Apple', cursive;
-font-family: 'Rock Salt', cursive;
---->
-
-<div class="main">
-  <div class="square" id="sq1" value="1" onclick="userMove()" ></div>
-  <div class="square" id="sq2" value="2" onclick="userMove()" ></div>
-  <div class="square" id="sq3" value="3" onclick="userMove()" ></div>
-  <div class="square" id="sq4" value="4" onclick="userMove()" ></div>
-  <div class="square" id="sq5" value="5" onclick="userMove()" ></div>
-  <div class="square" id="sq6" value="6" onclick="userMove()" ></div>
-  <div class="square" id="sq7" value="7" onclick="userMove()" ></div>
-  <div class="square" id="sq8" value="8" onclick="userMove()" ></div>
-  <div class="square" id="sq9" value="9" onclick="userMove()" ></div>
+  <div class="main">
+   <div class="square" id="sq1" value="1" onclick="userMove()"></div>
+   <div class="square" id="sq2" value="2" onclick="userMove()"></div>
+   <div class="square" id="sq3" value="3" onclick="userMove()"></div>
+   <div class="square" id="sq4" value="4" onclick="userMove()"></div>
+   <div class="square" id="sq5" value="5" onclick="userMove()"></div>
+   <div class="square" id="sq6" value="6" onclick="userMove()"></div>
+   <div class="square" id="sq7" value="7" onclick="userMove()"></div>
+   <div class="square" id="sq8" value="8" onclick="userMove()"></div>
+   <div class="square" id="sq9" value="9" onclick="userMove()"></div>
 </div>
 <div id="display">
-   </div>
-      <button onclick="reset()" class="btn">Reset</button>
+</div>
+<button id="reset" onclick="reset()" class="btn">RESET</button>
+<button id="x" value="X" class="btn close" onclick="choose()">X</button>
+<button id="o" value="0" class="btn close" onclick="choose()">0</button>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 
     <script src="js/index.js"></script>

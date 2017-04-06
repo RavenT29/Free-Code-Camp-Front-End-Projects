@@ -3,7 +3,7 @@ User Story: I can play a game of Tic Tac Toe with the computer. X DONE
 
 User Story: My game will reset as soon as it's over so I can play again. X DONE
 
-User Story: I can choose whether I want to play as X or O.
+User Story: I can choose whether I want to play as X or O. X DONE
 */
 
 var win = [
@@ -20,13 +20,10 @@ var movesLeft = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 var user = [];
 var computer = [];
 var val;
-var userChoice="X", computerChoice="0";
-/*
-    $("button").click(function() {
-      var clickedButton = $(this).val();
-*/
+var userChoice ="X",
+   computerChoice = "0";
 
-//arr is either user or computer; arr2 is moves left. returns undefined when double clicked or when you run out of squares to click
+//arr is either user or computer; arr2 is "movesLeft". returns undefined when you run out of squares to click
 function move(arr, arr2, val) {
    if (arr2 !== undefined && arr2.length !== 0) {
       if (arr.indexOf(val) === -1) {
@@ -48,17 +45,23 @@ function check(arr, arr2) {
    return false;
 }
 
+//resets the board and all the values
 function reset() {
    movesLeft = [1, 2, 3, 4, 5, 6, 7, 8, 9];
    user = [];
    computer = [];
-   for(var i=1;i<10;i++){
-      document.getElementById("display").innerHTML = "";
-      document.getElementById("sq"+i).innerHTML = "";
-      document.getElementById("sq"+i).style.pointerEvents = "auto";
+   for (var i = 1; i < 10; i++) {
+      document.getElementById("display").style.visibility = "hidden";
+      document.getElementById("sq" + i).innerHTML = "";
+      document.getElementById("sq" + i).style.pointerEvents = "auto";
    }
+    for (i = 1; i < 10; i++) {
+       document.getElementById("sq" + i).style.pointerEvents = "none";
+      }
+      $(".close").on("click", choose);
 }
 
+//returns a random value used for the computer's move. can later be replaced with an AI
 function randomMove(arr) {
    var len = arr.length;
    var random = Math.floor(Math.random() * len);
@@ -71,11 +74,13 @@ function computerMove() {
    document.getElementById("sq" + moveNumber).style.pointerEvents = "none";
    var helper = move(computer, movesLeft, moveNumber);
    if (check(computer, win)) {
-      document.getElementById("display").innerHTML = "You lose";
-            for(var i=1;i<10;i++){
-      document.getElementById("sq"+i).style.pointerEvents = "none";
-   }
+      document.getElementById("display").style.visibility = "visible";
+      document.getElementById("display").innerHTML = "You lost";
+      for (var i = 1; i < 10; i++) {
+         document.getElementById("sq" + i).style.pointerEvents = "none";
+      }
    } else if (movesLeft.length < 1) {
+      document.getElementById("display").style.visibility = "visible";
       document.getElementById("display").innerHTML = "Draw";
    }
 }
@@ -88,21 +93,31 @@ function userMove() {
    val = parseInt(val);
    var helper = move(user, movesLeft, val);
    if (check(user, win) === true) {
-      document.getElementById("display").innerHTML = "You Win";
-      for(var i=1;i<10;i++){
-      document.getElementById("sq"+i).style.pointerEvents = "none";
-   }
+      document.getElementById("display").style.visibility = "visible";
+      document.getElementById("display").innerHTML = "You Won";
+      for (var i = 1; i < 10; i++) {
+         document.getElementById("sq" + i).style.pointerEvents = "none";
+      }
    } else if (movesLeft.length < 1) {
+      document.getElementById("display").style.visibility = "visible";
       document.getElementById("display").innerHTML = "Draw";
    } else {
-      //console.log(user);//test
-      //console.log(movesLeft);//test
-      computerMove().delay(3000);
+      computerMove().delay(10000);
    }
 
 }
 
-$(document).ready(function() {
-   $(".square").on("click", userMove);
+//user chooses between playing with X or 0
+function choose() {
+   var value = $(this).attr("value");
+   userChoice = value;
+   computerChoice = (userChoice === 'X') ? '0': 'X';
+   for (var i = 1; i < 10; i++) {
+         document.getElementById("sq" + i).style.pointerEvents = "auto";
+      }
+}
 
+$(document).ready(function() {
+   reset();
+   $(".square").on("click", userMove);
 }); //document ready
