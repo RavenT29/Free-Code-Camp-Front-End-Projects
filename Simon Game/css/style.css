@@ -121,6 +121,9 @@ h1 {
   margin-top: 50px;
   border-radius: 50%;
 }
+.start:hover {
+  cursor: pointer;
+}
 
 .strict {
   position: absolute;

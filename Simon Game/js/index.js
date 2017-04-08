@@ -29,44 +29,67 @@ var strict = false;
 //  MAIN FUNCTIONS
 
 function random() {
-  return Math.floor(Math.random() * 4 + 1);
+  return [Math.floor(Math.random() * 4 + 1)];
 }
 
 function reset() {
   computer = [];
   user = [];
-  counter=0;
+  counter = 0;
+  $(".start").on("click", start);
 }
 
 function computerTurn() {
-  computer = computer.push(random());
+  computer = computer.concat(random());
+  console.log("computer: " + computer); //test
+
 }
 
 function userTurn() {
   var aux = $(this).attr("value");
   aux = [parseInt(aux)];
   user = user.concat(aux);
+  console.log("user: " + user); //test
 }
-strict=false;
-computer=[1,3,2];
-user=[1,3,4];
-function strictCheck(){
-  if(user[user.length-1]!==computer[computer.length-1]&&strict===true)
-    {
-      console.log("You lost");//replace with html // losing function
-      reset();
-} else if (user[user.length-1]!==computer[computer.length-1]&&strict===false){
-    user.splice(user.length-1);
-  } else {
-    counter++;
+
+function check(user, computer) {
+  if (counter < 20) {
+    if (user[user.length - 1] === computer[computer.length - 1]) {
+      //if last move si correct do this
+      user = [];
+      counter++;
+      // if last move is incorrect, do things
+    } else if (user[user.length - 1] !== computer[computer.length - 1]) {
+      if (strict === true) {
+        //if last move is wrong do things
+        //if strict is true do things
+        console.log("You lose");
+      } else if (strict === false) {
+        //if last move is wrong do things
+        //if strict is false do things
+      }
+    }
+  } else if (counter === 20) {
+    console.log("You won!");
+    //winning function
+    //click anywhere for reset
   }
 }
 
-
-
+function start() {
+  if(computer.length<1){
+      computerTurn();
+  }
+  if (user.length < computer.length) {
+    $(".semiCircle").on("click", userTurn);
+  } else if (user.length === computer.length) {
+    check(user, computer);
+  }
+}
 
 //  DOCUMENT READY
 
 $(document).ready(function() {
-  $(".semiCircle").on("click", strictCheck());
+
+  $("div").on("click", start);
 }); //document ready
