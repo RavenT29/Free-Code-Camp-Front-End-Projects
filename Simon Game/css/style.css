@@ -1,3 +1,17 @@
+.frame {
+  width: 620px;
+  height: 620px;
+  background: #272B27;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -300px;
+  margin-left: -300px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 10px 10px 30px #444444;
+}
+
 .square {
   width: 600px;
   height: 600px;
@@ -79,19 +93,19 @@ h1 {
 }
 
 .topLeft:active {
-  background: #65DB7B;
+  filter: brightness(200%);
 }
 
 .topRight:active {
-  background: #FB4D28;
+  filter: brightness(200%);
 }
 
 .bottomLeft:active {
-  background: #FDFA57;
+  filter: brightness(200%);
 }
 
 .bottomRight:active {
-  background: #02AAF1;
+  filter: brightness(200%);
 }
 
 .topLeft:hover,
@@ -109,6 +123,13 @@ h1 {
   left: 50%;
   margin-left: -30px;
   margin-top: 40px;
+  color: red;
+  font-size: 2.2em;
+  text-align: right;
+  padding: 9px;
+  font-family: 'Segment7Standard';
+  font-weight: normal;
+  font-style: italic;
 }
 
 .start {
@@ -120,6 +141,10 @@ h1 {
   margin-left: -15px;
   margin-top: 50px;
   border-radius: 50%;
+}
+
+.start:hover {
+  cursor: pointer;
 }
 
 .strict {
@@ -148,4 +173,26 @@ h6 {
   color: white;
   margin-top: -45px;
   margin-left: -5px;
+}
+
+.hover {
+  filter: brightness(200%);
+}
+
+.win {
+  width: 300px;
+  height: 100px;
+  background: #272B27;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -150px;
+  color: white;
+  color: white;
+  font-family: 'Bungee', cursive;
+  font-size: 4em;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 80px;
+  z-index: 100;
 }
