@@ -1,3 +1,18 @@
+.frame {
+    width:620px;
+    height:620px;
+    background: #272B27;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -300px;
+  margin-left: -300px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 10px 10px 30px #444444;
+}
+
+
 .square {
   width: 600px;
   height: 600px;
@@ -79,19 +94,19 @@ h1 {
 }
 
 .topLeft:active {
-  background: #65DB7B;
+  filter: brightness(200%); 
 }
 
 .topRight:active {
-  background: #FB4D28;
+  filter: brightness(200%); 
 }
 
 .bottomLeft:active {
-  background: #FDFA57;
+  filter: brightness(200%); 
 }
 
 .bottomRight:active {
-  background: #02AAF1;
+  filter: brightness(200%); 
 }
 
 .topLeft:hover,
@@ -121,6 +136,9 @@ h1 {
   margin-top: 50px;
   border-radius: 50%;
 }
+.start:hover {
+  cursor: pointer;
+}
 
 .strict {
   position: absolute;
@@ -148,4 +166,7 @@ h6 {
   color: white;
   margin-top: -45px;
   margin-left: -5px;
+}
+.hover {
+    filter: brightness(200%); 
 }
