@@ -21,5 +21,9 @@ To earn this certification, you'll build 10 front-end projects and implement man
 4. Local Weather App
 5. Wikipedia Viewer
 6. Twitch.tv
+7. JavaScript Calculator
+8. Pomodoro Clock
+9. Tic Tac Toe Game
+10. Simon Game
 
 You can check my Front End Certificate [here](https://www.freecodecamp.com/anawebdev/front-end-certification).
