@@ -16,22 +16,17 @@ body {
 }
 
 h1 {
-  padding-top: 50px;
+  padding: 50px;
   font-family: 'Black Ops One', cursive;
   text-align: center;
   color: white;
 }
 
-#modifySession {
-  margin-left: 150px;
+#modifySession, #modifyBreak {
   color: white;
-  margin-top: -30px;
-  width: 200px;
-  height: 50px;
 }
 
-#sessionMinus,
-#sessionPlus {
+#sessionMinus, #sessionPlus, #breakMinus, #breakPlus {
   width: 50px;
   height: 50px;
   float: left;
@@ -44,61 +39,22 @@ h1 {
   background: none;
   border-radius: 5px;
 }
-
-#sessionPlus {
+#sessionPlus, #breakPlus {
   float: right;
 }
-
 #idSession {
   text-align: center;
   padding: 0;
-  margin-top: 50px;
   color: white;
   font-family: 'Black Ops One', cursive;
   font-size: 2.3em;
 }
-
-#nameSession {
-  width: 200px;
-  height: auto;
-  margin-left: 150px;
-}
-
 #nameSessionP {
   text-align: center;
   padding: 0px;
-  margin-top: 50px;
   color: white;
   font-family: 'Black Ops One', cursive;
   font-size: 1.8em;
-}
-
-#modifyBreak {
-  float: right;
-  margin-right: 150px;
-  color: white;
-  margin-top: -50px;
-  width: 200px;
-  height: 50px;
-}
-
-#breakMinus,
-#breakPlus {
-  width: 50px;
-  height: 50px;
-  float: left;
-  border: solid 3px white;
-  font-family: 'Black Ops One', cursive;
-  font-size: 2em;
-  text-align: center;
-  padding: 0px;
-  color: white;
-  background: none;
-  border-radius: 5px;
-}
-
-#breakPlus {
-  float: right;
 }
 
 #idBreaks {
@@ -109,14 +65,6 @@ h1 {
   font-size: 2.3em;
 }
 
-#nameBreak {
-  width: 200px;
-  height: auto;
-  float: right;
-  margin-right: 150px;
-  margin-top: -114px;
-}
-
 #nameBreakP {
   text-align: center;
   color: white;
@@ -125,15 +73,16 @@ h1 {
 }
 
 .circle {
-  position: absolute;
   border: solid 5px white;
   width: 400px;
   height: 400px;
-  top: 50%;
-  left: 50%;
-  margin-left: -200px;
-  margin-top: -200px;
   border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: 450px) {
+    width: 290px;
+    height: 290px;
+  }
 }
 
 #display {
@@ -148,12 +97,9 @@ h1 {
 #displayTitle {
   font-family: 'Black Ops One', cursive;
   color: white;
-  position: absolute;
-  width: 300px;
+  position: relative;
+  top: 90px;
   overflow: clip;
-  bottom: 25%;
-  left: 50%;
-  margin-left: -150px;
   text-align: center;
 }
 
@@ -161,10 +107,7 @@ h1 {
   font-size: 4em;
 }
 
-#sessionMinus:hover,
-#sessionPlus:hover,
-#breakMinus:hover,
-#breakPlus:hover {
+#sessionMinus:hover, #sessionPlus:hover, #breakMinus:hover, #breakPlus:hover {
   background: #009688;
   cursor: pointer;
 }
