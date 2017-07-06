@@ -3,6 +3,10 @@
   width: 700px;
   height: 280px;
   overflow: hidden;
+  @media screen and (max-width:700px){
+    width: 320px;
+    height: 150px;
+  }
 }
 
 .centered {
@@ -11,6 +15,10 @@
   left: 50%;
   margin-top: -210px;
   margin-left: -350px;
+  @media screen and (max-width:700px){
+    margin-left: -175px;
+    margin-top: -75px;
+  }
 }
 
 img {
@@ -36,6 +44,7 @@ img {
   background-size: cover;
   opacity: 1;
   filter: blur(10px) brightness(100%);
+
 }
 
 h2 {
@@ -44,6 +53,9 @@ h2 {
   left: 40px;
   color: white;
   font-size: 1.2em;
+  @media screen and (max-width:700px){
+    font-size: 0.6em;
+  }
 }
 
 ul {
@@ -58,6 +70,12 @@ ul {
   left: 50%;
   margin-top: 70px;
   margin-left: -320px;
+  @media screen and (max-width:700px){
+    width: 290px;
+    margin-top: 35px;
+    margin-left: -145px;
+    font-size: 8px;
+  }
 }
 
 ul li {
@@ -68,6 +86,12 @@ ul li {
   width: 134px;
   height: 80px;
   padding: 8px;
+  @media screen and (max-width:700px){
+    width: 55px;
+    height: 40px;
+    padding: 4px 0;
+    margin-left: 3px;
+  }
 
 }
 li {
