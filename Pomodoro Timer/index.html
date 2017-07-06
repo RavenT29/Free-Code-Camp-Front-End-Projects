@@ -13,40 +13,58 @@
 </head>
 
 <body>
-  <header>
-  <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
-</header>
-
 <h1>Pomodoro Clock</h1>
 
-<div id="nameSession">
-  <p id="nameSessionP">Session</p>
-</div>
-
-<div id="modifySession">
-  <button id="sessionMinus" class="btn">-</button>
-  <button id="sessionPlus" class="btn">+</button>
-  <div id="session">
-    <div id="sessionLen">
+<div class="container-fluid">
+  <div class="row">
+    
+    <div class="col-md-2">
     </div>
+    
+    <div class="col-md-4">
+      <div id="nameSession">
+        <p id="nameSessionP">Session</p>
+      </div>
+
+       <div id="modifySession">
+         <button id="sessionMinus" class="btn">-</button>
+         <button id="sessionPlus" class="btn">+</button>
+         <div id="session">
+           <div id="sessionLen">
+           </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div id="nameBreak">
+        <p id="nameBreakP">Break</p>
+      </div>
+
+      <div id="modifyBreak">
+        <button id="breakMinus">-</button>
+        <button id="breakPlus">+</button>
+        <div id="breakLen">
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-2">
+    </div>
+    
   </div>
-</div>
-
-<div id="nameBreak">
-  <p id="nameBreakP">Break</p>
-</div>
-
-<div id="modifyBreak">
-  <button id="breakMinus">-</button>
-  <button id="breakPlus">+</button>
-  <div id="breakLen">
-  </div>
-</div>
-
-<div class="circle">
-  <div id="display"></div>
-  <div id="displayTitle">
-    <div id="button">
+  
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+      <div class="circle">
+        <div id="display"></div>
+        <div id="displayTitle">
+          <div id="button">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
