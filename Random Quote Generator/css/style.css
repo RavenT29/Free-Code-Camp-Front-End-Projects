@@ -1,7 +1,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-color: #FFA07A;
+  background-color: #0ED2F7;
 }
 
 #twitter {
@@ -14,7 +14,7 @@ body {
   bottom: 20px;
   margin: 0px;
   margin-top: 60px;
-  background-color: #FFA07A;
+  background-color: #0ED2F7;
   color: white;
 }
 
@@ -28,7 +28,7 @@ body {
   right: 60px;
   bottom: 20px;
   margin: 0px;
-  background-color: #FFA07A;
+  background-color: #0ED2F7;
   color: white;
   margin-top: 60px;
   font-family: 'Open Sans', 'Arial', sans-serif;
@@ -62,6 +62,7 @@ body {
 #quoteDisplay {
   font-family: 'Courgette', 'arial', cursive;
   font-size: 1.4em;
+  color: #0ED2F7;
 }
 
 #authorDisplay {
@@ -71,10 +72,12 @@ body {
   margin-bottom: 20px;
   font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 1em;
+  color: #0ED2F7;
 }
 
 #qsigns {
   font-size: 2.5em;
+  color: #0ED2F7;
 }
 
 #bird {
