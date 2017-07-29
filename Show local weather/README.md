@@ -1,4 +1,4 @@
-[](http://i.imgur.com/MImgpQA.jpg)
+![](http://i.imgur.com/MImgpQA.jpg)
 
 
 ## Description
@@ -17,7 +17,7 @@ Unsure if the people walking down the street are wearing big scarves as a fashio
 
 ## Demo
 
-[](http://i.imgur.com/eMtSycj.gif "toggling between different units")
+![](http://i.imgur.com/eMtSycj.gif "toggling between different units")
 
 - - -
 
